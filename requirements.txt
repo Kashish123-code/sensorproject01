@@ -1,4 +1,26 @@
-pandas
-numpy
-
--e.
+aiofiles
+dill==0.3.5.1
+dnspython==2.2.1
+database-connect==0.1.66
+evidently>=0.4.36  # newer version supports Python 3.13
+Flask>=3.0.3       # compatible with Python 3.13
+httptools==0.5.0
+imblearn==0.0
+ipykernel
+jinja2>=3.1.4
+mypy-boto3-s3==1.24.76
+pip-chill==1.0.1
+pymongo>=4.7.3
+python-dotenv>=1.0.1
+python-multipart==0.0.6
+seaborn>=0.13.2
+types-s3transfer==0.6.0.post4
+uvicorn>=0.30.0
+watchfiles==0.21.0
+websockets>=12.0
+wincertstore==0.2
+xgboost>=2.1.0
+neuro-mf==0.0.5
+boto3>=1.35.0
+Werkzeug>=3.0.3
+-e .
