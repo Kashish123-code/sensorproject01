@@ -74,7 +74,7 @@ class DataTransformation:
 
             preprocessor = self.get_data_transformer_object()
 
-            X_train_scaled = preprocessor.fit_tranform(X_train)
+            X_train_scaled = preprocessor.fit_transform(X_train)
             X_test_scaled = preprocessor.transform(X_test)
 
             preprocessor_path = self.data_transformation_config.transformed_object_file_path
@@ -82,8 +82,8 @@ class DataTransformation:
 
             self.utils.save_object(file_path=preprocessor_path,obj=preprocessor)
 
-            train_arr = np.c[X_train_scaled,np.array(y_train)]
-            test_arr = np.c[X_test_scaled,np.array(y_test)]
+            train_arr = np.c_[X_train_scaled,np.array(y_train)]
+            test_arr = np.c_[X_test_scaled,np.array(y_test)]
 
             return (train_arr,test_arr,preprocessor_path)
         except Exception as e:

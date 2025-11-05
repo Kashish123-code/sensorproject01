@@ -5,10 +5,11 @@ import pandas as pd
 import pickle
 from src.logger import logging
 from src.exception import CustomException
-from flask import request
+from flask import Request
 from src.constant import *
 from src.utils.main_utils import MainUtils
 from dataclasses import dataclass
+
 
 @dataclass
 class PredictionPipelineConfig:
@@ -20,10 +21,10 @@ class PredictionPipelineConfig:
 
 
 class PredictionPipeline:
-    def __init__(self,request: request):
+    def __init__(self,request: Request):
 
         self.request = request
-        self.utils = MainUtils()
+        self.utils = MainUtils() 
         self.prediction_pipeline_config = PredictionPipelineConfig()
 
     def save_input_files(self) -> str:

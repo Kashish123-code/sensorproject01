@@ -2,9 +2,9 @@ aiofiles
 dill==0.3.5.1
 dnspython==2.2.1
 database-connect==0.1.66
-evidently>=0.4.36  # newer version supports Python 3.13
-Flask>=3.0.3       # compatible with Python 3.13
-httptools==0.5.0
+evidently>=0.4.36      # newer version supports Python 3.13
+Flask>=3.0.3           # compatible with Python 3.13
+h11>=0.14.0            # replacing httptools, works with Uvicorn
 imblearn==0.0
 ipykernel
 jinja2>=3.1.4
